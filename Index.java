@@ -1,3 +1,4 @@
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UIManager;
@@ -8,14 +9,12 @@ import javax.swing.UnsupportedLookAndFeelException;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class Index extends javax.swing.JFrame {
 
-     
     public Index() {
         initComponents();
     }
@@ -111,15 +110,15 @@ public class Index extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void adminbtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminbtn2MouseClicked
-      Adminlogin a=new Adminlogin();
-      a.setVisible(true);
-      this.setVisible(false);
+        Adminlogin a = new Adminlogin();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_adminbtn2MouseClicked
 
     private void adminbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminbtnActionPerformed
-       ReceptionistLogin rl=new ReceptionistLogin();
-       rl.setVisible(true);
-       this.dispose();
+        ReceptionistLogin rl = new ReceptionistLogin();
+        rl.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_adminbtnActionPerformed
 
     private void adminbtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminbtn2ActionPerformed
@@ -127,9 +126,9 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_adminbtn2ActionPerformed
 
     private void adminbtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminbtn3ActionPerformed
-doctorlogin dl=new doctorlogin();
-dl.setVisible(true);
-this.dispose();        // TODO add your handling code here:
+        doctorlogin dl = new doctorlogin();
+        dl.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_adminbtn3ActionPerformed
 
     /**

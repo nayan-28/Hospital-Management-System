@@ -1,17 +1,12 @@
 
-
-
 import java.awt.Color;
 import javax.swing.JOptionPane;
-
-
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Muhammmad Kashif
@@ -19,11 +14,11 @@ import javax.swing.JOptionPane;
 public class Adminlogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form Adminlogin
+     * Creates new form Admin login
      */
     public Adminlogin() {
         initComponents();
-        jPanel1.setBackground(new Color(255,255,255,100));
+        jPanel1.setBackground(new Color(255, 255, 255, 100));
     }
 
     /**
@@ -111,7 +106,7 @@ public class Adminlogin extends javax.swing.JFrame {
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 390, 430));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/home.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/back (2).png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -158,38 +153,35 @@ public class Adminlogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-      
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
-       // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-       // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    String user;
-    String pass;
-    user=username.getText();
-    pass=password.getText();
-    adminpanel p=new adminpanel();
-        if(user.equals("admin")&&pass.equals("admin"))
-       {
-           this.dispose();
-          p.setVisible(true);
-       }
-        else
-        {
-           JOptionPane.showMessageDialog(this,"Incorrect Admin Username & Password");
+        String user;
+        String pass;
+        user = username.getText();
+        pass = password.getText();
+        adminpanel p = new adminpanel();
+        if (user.equals("admin") && pass.equals("admin")) {
+            this.dispose();
+            p.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Incorrect Admin Username & Password");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       this.dispose();
-       Index in=new Index();
-       in.setVisible(true);
+        this.dispose();
+        Index in = new Index();
+        in.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -221,6 +213,7 @@ public class Adminlogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Adminlogin().setVisible(true);
             }

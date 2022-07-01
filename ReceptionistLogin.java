@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Muhammmad Kashif
@@ -23,7 +22,7 @@ public class ReceptionistLogin extends javax.swing.JFrame {
      */
     public ReceptionistLogin() {
         initComponents();
-         label.setBackground(new Color(255,255,255,100));
+        label.setBackground(new Color(255, 255, 255, 100));
     }
 
     /**
@@ -204,34 +203,33 @@ public class ReceptionistLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       String pass=password.getText();
-       ReceptionitActivity ra=new ReceptionitActivity();
-        try{
-              Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
-           
-            PreparedStatement pst = conn.prepareStatement( "SELECT username,password FROM hospitalmanagementsystem.receptionist Where username='"+username.getText()+"'");  
-         
-            ResultSet rs=pst.executeQuery();
-            while(rs.next()){
-            if(pass.equals(rs.getString("password"))){
-                JOptionPane.showMessageDialog(null,"Login Sucessfull");
-                 ra.setVisible(true);
-                this.dispose();
+        String pass = password.getText();
+        ReceptionitActivity ra = new ReceptionitActivity();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+
+            PreparedStatement pst = conn.prepareStatement("SELECT username,password FROM hospitalmanagementsystem.receptionist Where username='" + username.getText() + "'");
+
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                if (pass.equals(rs.getString("password"))) {
+                    JOptionPane.showMessageDialog(null, "Login Sucessfull");
+                    ra.setVisible(true);
+                    this.dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid Email Or Password");
+
+                }
             }
-            else{
-                JOptionPane.showMessageDialog(null,"Invalid Email Or Password");
-               
-            }
-       }}
-       catch(Exception e){
-         JOptionPane.showMessageDialog(this, e.getMessage());
-       }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
-        Index in=new Index();
+        Index in = new Index();
         in.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -263,10 +261,8 @@ public class ReceptionistLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ReceptionistLogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ReceptionistLogin().setVisible(true);
         });
     }
 

@@ -11,19 +11,18 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class doctorlogin extends javax.swing.JFrame {
 
     /**
-  
+     *
      */
     public doctorlogin() {
         initComponents();
-        label2.setBackground(new Color(255,255,255,100));
+        label2.setBackground(new Color(255, 255, 255, 100));
     }
 
     /**
@@ -205,38 +204,36 @@ public class doctorlogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String pass=password.getText();  
-        String user=username2.getText();
-       doctoractivity da=new doctoractivity();
-        try{
+        String pass = password.getText();
+        String user = username2.getText();
+        doctoractivity da = new doctoractivity();
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
 
-            PreparedStatement pst = conn.prepareStatement( "SELECT * FROM hospitalmanagementsystem.doctor Where username='"+username2.getText()+"'");
+            PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.doctor Where username='" + username2.getText() + "'");
 
-            ResultSet rs=pst.executeQuery();
-            while(rs.next()){
-                if(pass.equals(rs.getString("password"))){
-                 
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                if (pass.equals(rs.getString("password"))) {
+
                     da.setVisible(true);
                     JOptionPane.showMessageDialog(null, "Login Succesful", "Welcome " + user, JOptionPane.INFORMATION_MESSAGE);
-this.dispose();
+                    this.dispose();
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid Email Or Password");
 
                 }
-                else{
-                    JOptionPane.showMessageDialog(null,"Invalid Email Or Password");
-
-
-                }
-            }}
-            catch(Exception e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
             }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
-        Index in=new Index();
+        Index in = new Index();
         in.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -268,10 +265,8 @@ this.dispose();
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new doctorlogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new doctorlogin().setVisible(true);
         });
     }
 

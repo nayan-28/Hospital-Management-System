@@ -1,3 +1,4 @@
+
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,14 +8,11 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Muhammmad Kashif
@@ -26,7 +24,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
      */
     public medicinedetails1() {
         initComponents();
-        panel2.setBackground(new Color(255,255,255,100));
+        panel2.setBackground(new Color(255, 255, 255, 100));
         showTableData();
     }
 
@@ -71,6 +69,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         quantity = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -287,11 +286,14 @@ public class medicinedetails1 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/capsule.png"))); // NOI18N
         panel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 103, -1, -1));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
+        panel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 730));
+
         jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 720));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1330, 820));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1300, 820));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -349,50 +351,23 @@ public class medicinedetails1 extends javax.swing.JFrame {
     }//GEN-LAST:event_dd2ddActionPerformed
 
     private void jButton3jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3jButton1ActionPerformed
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
-            PreparedStatement pst = conn.prepareStatement("insert into medicine"+"(name,dailydose,refno,dose,sideeffects,issuedate,expirydate,componyname,storage,price,quantity)"+" values(?,?,?,?,?,?,?,?,?,?,?)");
-            pst.setString(1,name2.getText());
-            pst.setString(2,dd2.getText());
-            pst.setString(3,ref2.getText());
-            pst.setString(4,dose2.getText());
-            pst.setString(5,sideeffects2.getText());
-            pst.setString(6,issue2.getText());
-            pst.setString(7,expiry2.getText());
-            pst.setString(8,compony2.getText());
-            pst.setString(9,advice2.getText());
- pst.setString(10,price.getText());
-            pst.setString(11,quantity.getText());
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+            PreparedStatement pst = conn.prepareStatement("insert into medicine" + "(name,dailydose,refno,dose,sideeffects,issuedate,expirydate,componyname,storage,price,quantity)" + " values(?,?,?,?,?,?,?,?,?,?,?)");
+            pst.setString(1, name2.getText());
+            pst.setString(2, dd2.getText());
+            pst.setString(3, ref2.getText());
+            pst.setString(4, dose2.getText());
+            pst.setString(5, sideeffects2.getText());
+            pst.setString(6, issue2.getText());
+            pst.setString(7, expiry2.getText());
+            pst.setString(8, compony2.getText());
+            pst.setString(9, advice2.getText());
+            pst.setString(10, price.getText());
+            pst.setString(11, quantity.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Medicine Added Sucessfully");
-            showTableData();
-            name2.setText(null);
-            dd2.setText(null);
-            ref2.setText(null);
-            dose2.setText(null);
-            sideeffects2.setText(null);
-            issue2.setText(null);
-            expiry2.setText(null);
-            compony2.setText(null);
-            advice2.setText(null);
-            price.setText(null);
-             quantity.setText(null);
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-
-        }
-    }//GEN-LAST:event_jButton3jButton1ActionPerformed
-
-    private void jButton8jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8jButton4ActionPerformed
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
-            PreparedStatement pst = conn.prepareStatement("delete from medicine where refno=?");
-            pst.setString(1,ref2.getText());
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Medicine Added Sucessfully");
             showTableData();
             name2.setText(null);
             dd2.setText(null);
@@ -405,54 +380,76 @@ public class medicinedetails1 extends javax.swing.JFrame {
             advice2.setText(null);
             price.setText(null);
             quantity.setText(null);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+
         }
-        catch(Exception e){
+    }//GEN-LAST:event_jButton3jButton1ActionPerformed
+
+    private void jButton8jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8jButton4ActionPerformed
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+            PreparedStatement pst = conn.prepareStatement("delete from medicine where refno=?");
+            pst.setString(1, ref2.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Deleted Sucessfully");
+            showTableData();
+            name2.setText(null);
+            dd2.setText(null);
+            ref2.setText(null);
+            dose2.setText(null);
+            sideeffects2.setText(null);
+            issue2.setText(null);
+            expiry2.setText(null);
+            compony2.setText(null);
+            advice2.setText(null);
+            price.setText(null);
+            quantity.setText(null);
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_jButton8jButton4ActionPerformed
-public void showTableData(){
-    try{
+    public void showTableData() {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.medicine");
- ResultSet rs=pst.executeQuery();         
- depttable.setModel(DbUtils.resultSetToTableModel(rs));
-    }
-    catch(Exception e){
+            ResultSet rs = pst.executeQuery();
+            depttable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-}
+    }
     private void jButton9jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9jButton5ActionPerformed
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem?useSSL=false","root","asif");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("UPDATE medicine SET name=?,dailydose=?,dose=?,sideeffects=?,issuedate=?,expirydate=?,componyname=?,storage=?,price=?,quantity=? WHERE refno=?");
 
-            pst.setString(1,name2.getText());
-            pst.setString(2,dd2.getText());
-
-            pst.setString(3,dose2.getText());
-            pst.setString(4,sideeffects2.getText());
-            pst.setString(5,issue2.getText());
-            pst.setString(6,expiry2.getText());
-            pst.setString(7,compony2.getText());
-            pst.setString(8,advice2.getText());
-             pst.setString(9,price.getText());
-            pst.setString(10,quantity.getText());
-            pst.setString(11,ref2.getText());
+            pst.setString(1, name2.getText());
+            pst.setString(2, dd2.getText());
+            pst.setString(3, dose2.getText());
+            pst.setString(4, sideeffects2.getText());
+            pst.setString(5, issue2.getText());
+            pst.setString(6, expiry2.getText());
+            pst.setString(7, compony2.getText());
+            pst.setString(8, advice2.getText());
+            pst.setString(9, price.getText());
+            pst.setString(10, quantity.getText());
+            pst.setString(11, ref2.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Record Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Updated Sucessfully");
             showTableData();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_jButton9jButton5ActionPerformed
 
     private void depttableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depttableMouseClicked
-        int SelectedRow =depttable.getSelectedRow();
-        DefaultTableModel table=(DefaultTableModel)depttable.getModel();
+        int SelectedRow = depttable.getSelectedRow();
+        DefaultTableModel table = (DefaultTableModel) depttable.getModel();
         name2.setText(table.getValueAt(SelectedRow, 0).toString());
         dd2.setText(table.getValueAt(SelectedRow, 1).toString());
         ref2.setText(table.getValueAt(SelectedRow, 2).toString());
@@ -467,7 +464,7 @@ public void showTableData(){
     }//GEN-LAST:event_depttableMouseClicked
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       Index ap=new  Index();
+        Index ap = new Index();
         ap.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -508,10 +505,8 @@ public void showTableData(){
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new medicinedetails1().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new medicinedetails1().setVisible(true);
         });
     }
 
@@ -542,6 +537,7 @@ public void showTableData(){
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField name2;

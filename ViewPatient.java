@@ -105,7 +105,7 @@ public class ViewPatient extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient Id", "First Name", "Second Name", "Age", "Martial Status", "Gender", "Address", "CNIC", "Patient Type", "Date", "Phone No", "Bed No"
+                "Patient Id", "First Name", "Second Name", "Age", "Martial Status", "Gender", "Address", "NID", "Patient Type", "Date", "Phone No", "Bed No"
             }
         ) {
             Class[] types = new Class [] {
@@ -137,7 +137,7 @@ public class ViewPatient extends javax.swing.JFrame {
                 searchKeyReleased(evt);
             }
         });
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 430, 61));
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 150, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/DOCTORDETAILS (2).png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
