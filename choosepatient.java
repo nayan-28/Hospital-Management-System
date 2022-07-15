@@ -62,6 +62,8 @@ public class choosepatient extends javax.swing.JFrame {
         time = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,7 +131,7 @@ public class choosepatient extends javax.swing.JFrame {
 
         dASearchbtn1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         dASearchbtn1.setForeground(new java.awt.Color(0, 102, 255));
-        dASearchbtn1.setText("NEXT");
+        dASearchbtn1.setText("SUBMIT");
         dASearchbtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dASearchbtn1MouseClicked(evt);
@@ -219,6 +221,16 @@ public class choosepatient extends javax.swing.JFrame {
 
         jPanel1.add(searchkey, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 1180, 550));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel25.setText("Copy@right");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 680, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel24.setText("Nayan Malakar & Nishat Jahan Tandra");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 680, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -370,6 +382,8 @@ public class choosepatient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class Adminlogin extends javax.swing.JFrame {
 
@@ -44,7 +44,6 @@ public class Adminlogin extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -116,21 +115,15 @@ public class Adminlogin extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setForeground(new java.awt.Color(255, 153, 51));
         jLabel5.setText("Copy@right");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 610, -1, 30));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 670, -1, 30));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel9.setForeground(new java.awt.Color(255, 153, 51));
         jLabel9.setText("Nayan Malakar & Nishat Jahan Tandra");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 640, -1, -1));
-
-        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel10.setText("Department of CSE,JUST");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 680, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/ADMINLOGIN (1).png"))); // NOI18N
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, -1, 890));
@@ -174,7 +167,7 @@ public class Adminlogin extends javax.swing.JFrame {
             this.dispose();
             p.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(this, "Incorrect Admin Username & Password");
+            JOptionPane.showMessageDialog(this, "Incorrect Username or Password");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -212,18 +205,14 @@ public class Adminlogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Adminlogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Adminlogin().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

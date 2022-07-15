@@ -56,13 +56,12 @@ public class DeletePatient extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         status = new javax.swing.JComboBox();
         date = new javax.swing.JTextField();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         patienttype = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -200,12 +199,12 @@ public class DeletePatient extends javax.swing.JFrame {
         getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 260, 146, 33));
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 187, 32));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 202, 32));
 
         patienttype.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         patienttype.setForeground(new java.awt.Color(0, 204, 255));
@@ -249,20 +248,15 @@ public class DeletePatient extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/DOCTORDETAILS (2).png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel23.setText("Department of CSE,JUST");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 660, -1, -1));
-
         jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
         jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 640, -1, -1));
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 650, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel19.setForeground(new java.awt.Color(0, 51, 153));
         jLabel19.setText("Copy@right");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 620, -1, -1));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 650, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
@@ -379,9 +373,9 @@ public class DeletePatient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void patienttypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patienttypeActionPerformed
         // TODO add your handling code here:
@@ -412,15 +406,14 @@ public class DeletePatient extends javax.swing.JFrame {
                 gender.setSelectedItem(gen);
                 String add = rs.getString("Address");
                 address.setText(add);
-                String CNIC = rs.getString("CNIC");
-                cnic.setText(CNIC);
+                String NID = rs.getString("NID");
+                nid.setText(NID);
                 String ptype = rs.getString("PatientType");
                 patienttype.setSelectedItem(ptype);
                 String datey = rs.getString("Date");
                 date.setText(datey);
                 String pno = rs.getString("Phoneno");
                 phoneno.setText(pno);
-                String bno = rs.getString("Bedno");
             } else {
                 JOptionPane.showMessageDialog(null, "No Specific Id Found");
             }
@@ -436,20 +429,18 @@ public class DeletePatient extends javax.swing.JFrame {
             PreparedStatement pst = conn.prepareStatement("delete from patient where P_id =?");
             pst.setString(1, patientid.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Deleted Sucessfully");
             patientid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
-
             gender.setSelectedIndex(0);
             status.setSelectedIndex(0);
             patienttype.setSelectedIndex(0);
-
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
@@ -505,7 +496,6 @@ public class DeletePatient extends javax.swing.JFrame {
     private javax.swing.JMenu addpatient;
     private javax.swing.JTextField address;
     private javax.swing.JTextField age;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletepatient;
     private javax.swing.JTextField firstname;
@@ -523,7 +513,6 @@ public class DeletePatient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -536,6 +525,7 @@ public class DeletePatient extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField patientid;
     private javax.swing.JComboBox patienttype;
     private javax.swing.JTextField phoneno;

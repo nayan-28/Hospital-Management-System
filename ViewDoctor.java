@@ -101,19 +101,19 @@ public class ViewDoctor extends javax.swing.JFrame {
 
         doctortable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Doctor ID", "First Name", "SecondName", "Age", "Blood Group", "Gender", "Specialization", "Address", "NID", "Phoneno", "Maritialstatus", "City", "Joining date", "Leaving date", "Username", "Password"
+                "Doctor ID", "First Name", "SecondName", "Age", "Gender", "Specialization", "NID", "Phoneno", "City", "timing", "days"
             }
         ));
         jScrollPane2.setViewportView(doctortable);
@@ -256,7 +256,7 @@ public void showTableData(){
     try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
-            PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.doctor");
+            PreparedStatement pst = conn.prepareStatement("SELECT D_id,firstname,secondname,age,gender,specialization,NID,phoneno,city,timing,days FROM hospitalmanagementsystem.doctor");
  ResultSet rs=pst.executeQuery();         
 doctortable.setModel(DbUtils.resultSetToTableModel(rs));
     }

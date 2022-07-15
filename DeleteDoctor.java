@@ -56,7 +56,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
         age = new javax.swing.JTextField();
         gender = new javax.swing.JComboBox();
         bloodgroup = new javax.swing.JComboBox();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         status = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         joiningdate = new javax.swing.JTextField();
@@ -76,7 +76,9 @@ public class DeleteDoctor extends javax.swing.JFrame {
         timing = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         date = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         searchdoct = new javax.swing.JMenuBar();
         adddoc = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -110,7 +112,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 850, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 840, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -125,7 +127,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 1220, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 1210, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/doctor (4).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, 157));
@@ -211,12 +213,12 @@ public class DeleteDoctor extends javax.swing.JFrame {
         bloodgroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" }));
         getContentPane().add(bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(669, 262, 166, 33));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 420, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 420, 202, 32));
 
         status.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         status.setForeground(new java.awt.Color(0, 204, 255));
@@ -350,8 +352,18 @@ public class DeleteDoctor extends javax.swing.JFrame {
         });
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(1058, 464, 182, 32));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 1340, -1));
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Copy@right");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 670, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel23.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 670, -1, -1));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
 
         adddoc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         adddoc.setText("Add Doctors");
@@ -460,9 +472,9 @@ public class DeleteDoctor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void statusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusActionPerformed
         // TODO add your handling code here:
@@ -513,8 +525,8 @@ public class DeleteDoctor extends javax.swing.JFrame {
                 gender.setSelectedItem(gen);
                 String add = rs.getString("address");
                 address.setText(add);
-                String CNIC = rs.getString("cnic");
-                cnic.setText(CNIC);
+                String NID = rs.getString("NID");
+                nid.setText(NID);
                 String bg = rs.getString("bloodgroup");
                 bloodgroup.setSelectedItem(bg);
                 String jdatey = rs.getString("joiningdate");
@@ -566,14 +578,14 @@ public class DeleteDoctor extends javax.swing.JFrame {
             PreparedStatement pst = conn.prepareStatement("delete from doctor where D_id =?");
             pst.setString(1, doctorid.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Deleted Sucessfully");
             doctorid.setText(null);
             doctorid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             specialization.setSelectedIndex(0);
             phoneno.setText(null);
             joiningdate.setText(null);
@@ -641,7 +653,6 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private javax.swing.JTextField age;
     private javax.swing.JComboBox bloodgroup;
     private javax.swing.JTextField city;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletedoc;
     private javax.swing.JTextField doctorid;
@@ -652,7 +663,6 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -665,6 +675,9 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -678,6 +691,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JTextField joiningdate;
     private javax.swing.JTextField leavingdate;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField phoneno;
     private javax.swing.JButton search;
     private javax.swing.JMenu searchdoc;

@@ -32,6 +32,8 @@ public class ReceptionitActivity extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,7 +52,7 @@ public class ReceptionitActivity extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 330, 70));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, 330, 70));
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 153, 204));
@@ -60,7 +62,7 @@ public class ReceptionitActivity extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 320, 70));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 320, 70));
 
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 153, 204));
@@ -70,7 +72,7 @@ public class ReceptionitActivity extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 320, 70));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 320, 70));
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 153, 204));
@@ -83,8 +85,18 @@ public class ReceptionitActivity extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 170, 40));
 
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 670, -1, 30));
+
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel19.setText("Copy@right");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 670, -1, 30));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/recept.back.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1290, 720));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -153,7 +165,9 @@ public class ReceptionitActivity extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -143,7 +143,7 @@ public class history extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/pat.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 780));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 770));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1240, 780));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
@@ -196,16 +196,15 @@ public class history extends javax.swing.JFrame {
                 text.setText("                                 *************************************************        \n");
                 text.setText(text.getText() + "                                       " + rs.getString("Firstname") + "  " + rs.getString("SecondName") + "  HISTORY" + "                             Date: " + rs.getString("Date") + "\n");
                 text.setText(text.getText() + "                                 *************************************************           \n");
-                text.setText(text.getText() + "Patient Name:                             " + rs.getString("FirstName") + " " + rs.getString("SecondName"));
-                text.setText(text.getText() + "\nPatient Age:                                " + rs.getString("Age"));
+                text.setText(text.getText() + "Patient Name:                              " + rs.getString("FirstName") + " " + rs.getString("SecondName"));
+                text.setText(text.getText() + "\nPatient Age:                                 " + rs.getString("Age"));
                 text.setText(text.getText() + "\nGender:                                       " + rs.getString("Gender"));
-                text.setText(text.getText() + "\nCNIC:                                          " + rs.getString("CNIC"));
+                text.setText(text.getText() + "\nNID:                                            " + rs.getString("NID"));
                 text.setText(text.getText() + "\nPatient Type:                               " + rs.getString("PatientType"));
                 text.setText(text.getText() + "\nDisease:                                      " + rs.getString("disease"));
                 text.setText(text.getText() + "\nDiscription:                                  " + rs.getString("detail"));
                 text.setText(text.getText() + "\nMedicine Recomended:               " + rs.getString("tabletname"));
                 text.setText(text.getText() + "\nDaily Dose:                                  " + rs.getString("dailydose"));
-                text.setText(text.getText() + "\nCompany:                                    " + rs.getString("company"));
     }//GEN-LAST:event_jButton1ActionPerformed
  else {
                 JOptionPane.showMessageDialog(null, "No Specific Id Found");

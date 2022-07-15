@@ -52,10 +52,8 @@ public class medicinedetails1 extends javax.swing.JFrame {
         issue2 = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         expiry2 = new javax.swing.JTextField();
-        jLabel42 = new javax.swing.JLabel();
         compony2 = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
-        advice2 = new javax.swing.JTextField();
         dd2 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -64,16 +62,14 @@ public class medicinedetails1 extends javax.swing.JFrame {
         depttable = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-        jLabel44 = new javax.swing.JLabel();
-        price = new javax.swing.JTextField();
-        jLabel45 = new javax.swing.JLabel();
-        quantity = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -157,11 +153,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
         });
         panel2.add(expiry2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1015, 376, 229, 32));
 
-        jLabel42.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel42.setText("Storage Advice");
-        panel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 461, -1, 35));
-
         compony2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 compony2componyActionPerformed(evt);
@@ -173,13 +164,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
         jLabel43.setForeground(new java.awt.Color(0, 102, 204));
         jLabel43.setText("Company name");
         panel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 414, -1, 35));
-
-        advice2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                advice2adviceActionPerformed(evt);
-            }
-        });
-        panel2.add(advice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1015, 464, 229, 32));
 
         dd2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +180,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
                 jButton3jButton1ActionPerformed(evt);
             }
         });
-        panel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 211, 201, 44));
+        panel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 201, 44));
 
         jButton8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(0, 102, 204));
@@ -206,7 +190,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
                 jButton8jButton4ActionPerformed(evt);
             }
         });
-        panel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 211, -1, 44));
+        panel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, -1, 44));
 
         jButton9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(0, 102, 204));
@@ -216,25 +200,25 @@ public class medicinedetails1 extends javax.swing.JFrame {
                 jButton9jButton5ActionPerformed(evt);
             }
         });
-        panel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 211, 201, 44));
+        panel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, 201, 44));
 
         depttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8", "Title 9", "Title 10"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7"
             }
         ));
         depttable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -244,71 +228,41 @@ public class medicinedetails1 extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(depttable);
 
-        panel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 273, 683, 218));
+        panel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 683, 218));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 204));
         jLabel4.setText("MEDICINE DETAILS");
         panel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 78, 429, 105));
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/home.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/back (2).png"))); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        panel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 82, 63, 39));
-
-        jLabel44.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel44.setText("Price ");
-        panel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 502, -1, 35));
-
-        price.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pricecomponyActionPerformed(evt);
-            }
-        });
-        panel2.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(1015, 505, 229, 32));
-
-        jLabel45.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel45.setText("Qunatity Avaliable");
-        panel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 549, -1, 35));
-
-        quantity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityadviceActionPerformed(evt);
-            }
-        });
-        panel2.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1015, 549, 229, 32));
+        panel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 71, 70, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/capsule.png"))); // NOI18N
         panel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 103, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
-        panel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 730));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
+        panel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 710));
 
-        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 720));
+        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 620));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1300, 820));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel24.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 650, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel25.setText("Copy@right");
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 650, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -342,10 +296,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_compony2componyActionPerformed
 
-    private void advice2adviceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_advice2adviceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_advice2adviceActionPerformed
-
     private void dd2ddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dd2ddActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dd2ddActionPerformed
@@ -354,7 +304,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("insert into medicine" + "(name,dailydose,refno,dose,sideeffects,issuedate,expirydate,componyname,storage,price,quantity)" + " values(?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = conn.prepareStatement("insert into medicine" + "(name,dailydose,refno,dose,sideeffects,issuedate,expirydate,componyname)" + " values(?,?,?,?,?,?,?,?)");
             pst.setString(1, name2.getText());
             pst.setString(2, dd2.getText());
             pst.setString(3, ref2.getText());
@@ -363,9 +313,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
             pst.setString(6, issue2.getText());
             pst.setString(7, expiry2.getText());
             pst.setString(8, compony2.getText());
-            pst.setString(9, advice2.getText());
-            pst.setString(10, price.getText());
-            pst.setString(11, quantity.getText());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Medicine Added Sucessfully");
             showTableData();
@@ -377,9 +324,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
             issue2.setText(null);
             expiry2.setText(null);
             compony2.setText(null);
-            advice2.setText(null);
-            price.setText(null);
-            quantity.setText(null);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
 
@@ -403,9 +347,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
             issue2.setText(null);
             expiry2.setText(null);
             compony2.setText(null);
-            advice2.setText(null);
-            price.setText(null);
-            quantity.setText(null);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
@@ -426,7 +367,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("UPDATE medicine SET name=?,dailydose=?,dose=?,sideeffects=?,issuedate=?,expirydate=?,componyname=?,storage=?,price=?,quantity=? WHERE refno=?");
+            PreparedStatement pst = conn.prepareStatement("UPDATE medicine SET name=?,dailydose=?,dose=?,sideeffects=?,issuedate=?,expirydate=?,componyname=? WHERE refno=?");
 
             pst.setString(1, name2.getText());
             pst.setString(2, dd2.getText());
@@ -435,9 +376,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
             pst.setString(5, issue2.getText());
             pst.setString(6, expiry2.getText());
             pst.setString(7, compony2.getText());
-            pst.setString(8, advice2.getText());
-            pst.setString(9, price.getText());
-            pst.setString(10, quantity.getText());
             pst.setString(11, ref2.getText());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Updated Sucessfully");
@@ -458,24 +396,13 @@ public class medicinedetails1 extends javax.swing.JFrame {
         issue2.setText(table.getValueAt(SelectedRow, 5).toString());
         expiry2.setText(table.getValueAt(SelectedRow, 6).toString());
         compony2.setText(table.getValueAt(SelectedRow, 7).toString());
-        advice2.setText(table.getValueAt(SelectedRow, 8).toString());
-        price.setText(table.getValueAt(SelectedRow, 9).toString());
-        quantity.setText(table.getValueAt(SelectedRow, 10).toString());
     }//GEN-LAST:event_depttableMouseClicked
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Index ap = new Index();
-        ap.setVisible(true);
+        doctoractivity da = new doctoractivity();
+        da.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void pricecomponyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pricecomponyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pricecomponyActionPerformed
-
-    private void quantityadviceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityadviceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantityadviceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -511,7 +438,6 @@ public class medicinedetails1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField advice2;
     private javax.swing.JTextField compony2;
     private javax.swing.JTextField dd2;
     private javax.swing.JTable depttable;
@@ -524,7 +450,8 @@ public class medicinedetails1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -533,17 +460,12 @@ public class medicinedetails1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField name2;
     private javax.swing.JPanel panel2;
-    private javax.swing.JTextField price;
-    private javax.swing.JTextField quantity;
     private javax.swing.JTextField ref2;
     private javax.swing.JTextField sideeffects2;
     // End of variables declaration//GEN-END:variables

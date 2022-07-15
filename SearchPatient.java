@@ -55,7 +55,7 @@ public class SearchPatient extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         status = new javax.swing.JComboBox();
         date = new javax.swing.JTextField();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         patienttype = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         search = new javax.swing.JButton();
@@ -63,7 +63,6 @@ public class SearchPatient extends javax.swing.JFrame {
         update = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         searchpatient = new javax.swing.JMenuBar();
         addpatient = new javax.swing.JMenu();
@@ -211,12 +210,12 @@ public class SearchPatient extends javax.swing.JFrame {
         getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, 146, 33));
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 300, 187, 32));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 202, 32));
 
         patienttype.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         patienttype.setForeground(new java.awt.Color(0, 204, 255));
@@ -264,17 +263,12 @@ public class SearchPatient extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 204));
         jLabel19.setText("Copy@right");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, -1, -1));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 102, 204));
         jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 630, -1, -1));
-
-        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel23.setText("Department of CSE,JUST");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 650, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/patientbackground1.jpg"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -389,9 +383,9 @@ public class SearchPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void patienttypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patienttypeActionPerformed
         // TODO add your handling code here:
@@ -423,8 +417,8 @@ public class SearchPatient extends javax.swing.JFrame {
                 gender.setSelectedItem(gen);
                 String add = rs.getString("Address");
                 address.setText(add);
-                String CNIC = rs.getString("CNIC");
-                cnic.setText(CNIC);
+                String NID = rs.getString("NID");
+                nid.setText(NID);
                 String ptype = rs.getString("PatientType");
                 patienttype.setSelectedItem(ptype);
                 String datey = rs.getString("Date");
@@ -456,7 +450,7 @@ public class SearchPatient extends javax.swing.JFrame {
             pst.setString(4, (String) status.getSelectedItem());
             pst.setString(5, (String) gender.getSelectedItem());
             pst.setString(6, address.getText());
-            pst.setString(7, cnic.getText());
+            pst.setString(7, nid.getText());
             pst.setString(8, (String) patienttype.getSelectedItem());
             pst.setString(9, date.getText());
             pst.setString(10, phoneno.getText());
@@ -468,7 +462,7 @@ public class SearchPatient extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             gender.setSelectedIndex(0);
@@ -479,7 +473,7 @@ public class SearchPatient extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             gender.setSelectedIndex(0);
@@ -542,7 +536,6 @@ public class SearchPatient extends javax.swing.JFrame {
     private javax.swing.JMenu addpatient;
     private javax.swing.JTextField address;
     private javax.swing.JTextField age;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletepatient;
     private javax.swing.JTextField firstname;
@@ -558,7 +551,6 @@ public class SearchPatient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -571,6 +563,7 @@ public class SearchPatient extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField patientid;
     private javax.swing.JComboBox patienttype;
     private javax.swing.JTextField phoneno;

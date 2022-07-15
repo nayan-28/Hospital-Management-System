@@ -65,7 +65,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         martialstatus = new javax.swing.JComboBox();
         date = new javax.swing.JTextField();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         patienttype = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         bedno = new javax.swing.JTextField();
@@ -116,7 +116,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             .addGroup(panel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 407, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel12)
                 .addGap(457, 457, 457)
                 .addComponent(jLabel19)
@@ -126,72 +126,90 @@ public class PatientDetails1 extends javax.swing.JFrame {
         );
         panel2Layout.setVerticalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
             .addGroup(panel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel2Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel18))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(panel2Layout.createSequentialGroup()
+                                .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel19)
+                                    .addComponent(jLabel18))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(662, 662, 662))
         );
 
         jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1280, 60));
 
         searchkey.setBackground(new java.awt.Color(255, 255, 255));
+        searchkey.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 204));
         jLabel3.setText("First Name");
+        searchkey.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 79, 105, 35));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Patient ID");
+        searchkey.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 18, -1, 35));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 102, 204));
         jLabel5.setText("Maritial Status");
+        searchkey.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 186, -1, 34));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 102, 204));
         jLabel6.setText("Age");
+        searchkey.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 18, 42, 35));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 204));
         jLabel7.setText("Phone No.");
+        searchkey.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 240, 105, 35));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 204));
         jLabel8.setText("NID");
+        searchkey.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 186, 55, 35));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 102, 204));
         jLabel9.setText("Gender");
+        searchkey.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 79, -1, 35));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 102, 204));
         jLabel11.setText("Bed No.");
+        searchkey.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 240, 105, 35));
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 102, 204));
         jLabel20.setText("Second Name");
+        searchkey.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 79, -1, 35));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 102, 204));
         jLabel13.setText("Address");
+        searchkey.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 133, 105, 35));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 102, 204));
         jLabel14.setText("Patient Type");
+        searchkey.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 186, 105, 35));
+        searchkey.add(patientid, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 20, 193, 32));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
+        searchkey.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 135, 474, 32));
+        searchkey.add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 81, 172, 32));
+        searchkey.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(788, 20, 193, 32));
 
         gender.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         gender.setForeground(new java.awt.Color(0, 204, 255));
@@ -201,20 +219,25 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 genderActionPerformed(evt);
             }
         });
+        searchkey.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(789, 82, 192, 33));
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 102, 204));
         jLabel15.setText("Date");
+        searchkey.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 133, 48, 35));
 
         martialstatus.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         martialstatus.setForeground(new java.awt.Color(0, 204, 255));
         martialstatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Maritial Status", "Single", "Married", "Engaged" }));
+        searchkey.add(martialstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 189, 157, 33));
+        searchkey.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 135, 193, 32));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
+        searchkey.add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 188, 193, 32));
 
         patienttype.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         patienttype.setForeground(new java.awt.Color(0, 204, 255));
@@ -224,18 +247,22 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 patienttypeActionPerformed(evt);
             }
         });
+        searchkey.add(patienttype, new org.netbeans.lib.awtextra.AbsoluteConstraints(807, 189, 174, 33));
 
         phoneno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phonenoActionPerformed(evt);
             }
         });
+        searchkey.add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 242, 182, 32));
 
         bedno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bednoActionPerformed(evt);
             }
         });
+        searchkey.add(bedno, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 242, 193, 32));
+        searchkey.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 81, 193, 32));
 
         apTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -263,6 +290,8 @@ public class PatientDetails1 extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(apTable);
 
+        searchkey.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 366, 1218, 220));
+
         jButton2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 102, 204));
         jButton2.setText("ADD PATIENT");
@@ -271,6 +300,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        searchkey.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(993, 21, 208, 49));
 
         update.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         update.setForeground(new java.awt.Color(0, 102, 204));
@@ -280,6 +310,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 updateActionPerformed(evt);
             }
         });
+        searchkey.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(993, 88, 208, 48));
 
         jButton4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 102, 204));
@@ -289,10 +320,12 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        searchkey.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(993, 167, 208, 49));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 255));
         jLabel16.setText("Search Patient");
+        searchkey.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 307, -1, -1));
 
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -304,171 +337,25 @@ public class PatientDetails1 extends javax.swing.JFrame {
                 searchKeyReleased(evt);
             }
         });
+        searchkey.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 317, 165, 37));
 
-        javax.swing.GroupLayout searchkeyLayout = new javax.swing.GroupLayout(searchkey);
-        searchkey.setLayout(searchkeyLayout);
-        searchkeyLayout.setHorizontalGroup(
-            searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(searchkeyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchkeyLayout.createSequentialGroup()
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchkeyLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(patientid, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchkeyLayout.createSequentialGroup()
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(firstname, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                                    .addComponent(date)))
-                            .addGroup(searchkeyLayout.createSequentialGroup()
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(51, 51, 51)
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cnic)
-                                    .addComponent(bedno))))
-                        .addGap(18, 18, 18)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(searchkeyLayout.createSequentialGroup()
-                                .addGap(124, 124, 124)
-                                .addComponent(secondname)
-                                .addGap(34, 34, 34)
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(searchkeyLayout.createSequentialGroup()
-                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(43, 43, 43)
-                                        .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(searchkeyLayout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(searchkeyLayout.createSequentialGroup()
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5)
-                                    .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel20)
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(searchkeyLayout.createSequentialGroup()
-                                        .addComponent(martialstatus, 0, 157, Short.MAX_VALUE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(patienttype, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(address)
-                                    .addGroup(searchkeyLayout.createSequentialGroup()
-                                        .addComponent(phoneno, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                .addComponent(update, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29))
-                    .addGroup(searchkeyLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())))
-            .addGroup(searchkeyLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        searchkeyLayout.setVerticalGroup(
-            searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(searchkeyLayout.createSequentialGroup()
-                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(searchkeyLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(patientid, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(searchkeyLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(searchkeyLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(secondname, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cnic, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(patienttype, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(martialstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bedno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(phoneno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(searchkeyLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(update, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(searchkeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel16)
-                    .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-        );
-
-        jPanel1.add(searchkey, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 1230, 600));
+        jPanel1.add(searchkey, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 1230, 600));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 760));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -507,9 +394,9 @@ public class PatientDetails1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void patienttypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patienttypeActionPerformed
         // TODO add your handling code here:
@@ -528,7 +415,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("insert into patient" + "(P_id,FirstName,SecondName,Age,MaritialStatus,Gender,Address,CNIC,PatientType,Date,PhoneNo,BedNo)" + " values(?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = conn.prepareStatement("insert into patient" + "(P_id,FirstName,SecondName,Age,MaritialStatus,Gender,Address,NID,PatientType,Date,PhoneNo,BedNo)" + " values(?,?,?,?,?,?,?,?,?,?,?,?)");
 
             pst.setString(1, patientid.getText());
             pst.setString(2, firstname.getText());
@@ -537,7 +424,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             pst.setString(5, (String) martialstatus.getSelectedItem());
             pst.setString(6, (String) gender.getSelectedItem());
             pst.setString(7, address.getText());
-            pst.setString(8, cnic.getText());
+            pst.setString(8, nid.getText());
             pst.setString(9, (String) patienttype.getSelectedItem());
             pst.setString(10, date.getText());
             pst.setString(11, phoneno.getText());
@@ -551,7 +438,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             bedno.setText(null);
@@ -568,14 +455,14 @@ public class PatientDetails1 extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("UPDATE patient SET FirstName=?,SecondName=?,Age=?,MaritialStatus=?,Gender=?,Address=?,CNIC=?,PatientType=?,Date=?,PhoneNo=?,BedNo=? WHERE P_id=?");
+            PreparedStatement pst = conn.prepareStatement("UPDATE patient SET FirstName=?,SecondName=?,Age=?,MaritialStatus=?,Gender=?,Address=?,NID=?,PatientType=?,Date=?,PhoneNo=?,BedNo=? WHERE P_id=?");
             pst.setString(1, firstname.getText());
             pst.setString(2, secondname.getText());
             pst.setString(3, age.getText());
             pst.setString(4, (String) martialstatus.getSelectedItem());
             pst.setString(5, (String) gender.getSelectedItem());
             pst.setString(6, address.getText());
-            pst.setString(7, cnic.getText());
+            pst.setString(7, nid.getText());
             pst.setString(8, (String) patienttype.getSelectedItem());
             pst.setString(9, date.getText());
             pst.setString(10, phoneno.getText());
@@ -589,7 +476,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             bedno.setText(null);
@@ -601,7 +488,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             bedno.setText(null);
@@ -631,7 +518,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             bedno.setText(null);
@@ -666,7 +553,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
         martialstatus.setSelectedItem(table.getValueAt(SelectedRow, 4).toString());
         gender.setSelectedItem(table.getValueAt(SelectedRow, 5).toString());
         address.setText(table.getValueAt(SelectedRow, 6).toString());
-        cnic.setText(table.getValueAt(SelectedRow, 7).toString());
+        nid.setText(table.getValueAt(SelectedRow, 7).toString());
         patienttype.setSelectedItem(table.getValueAt(SelectedRow, 8).toString());
         date.setText(table.getValueAt(SelectedRow, 9).toString());
         phoneno.setText(table.getValueAt(SelectedRow, 10).toString());
@@ -711,7 +598,6 @@ public class PatientDetails1 extends javax.swing.JFrame {
     private javax.swing.JTextField age;
     private javax.swing.JTable apTable;
     private javax.swing.JTextField bedno;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JTextField firstname;
     private javax.swing.JComboBox gender;
@@ -739,6 +625,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox martialstatus;
+    private javax.swing.JTextField nid;
     private javax.swing.JPanel panel2;
     private javax.swing.JTextField patientid;
     private javax.swing.JComboBox patienttype;

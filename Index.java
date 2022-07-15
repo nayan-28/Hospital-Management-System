@@ -32,7 +32,6 @@ public class Index extends javax.swing.JFrame {
         adminbtn3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,7 +39,7 @@ public class Index extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        adminbtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        adminbtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         adminbtn.setForeground(new java.awt.Color(51, 153, 255));
         adminbtn.setText("RECEPTIONIST");
         adminbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +49,7 @@ public class Index extends javax.swing.JFrame {
         });
         jPanel2.add(adminbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, 170, 50));
 
-        adminbtn2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        adminbtn2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         adminbtn2.setForeground(new java.awt.Color(51, 153, 255));
         adminbtn2.setText("ADMIN");
         adminbtn2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -70,7 +69,7 @@ public class Index extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 130, 140));
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 310, -1, 120));
 
-        adminbtn3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        adminbtn3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         adminbtn3.setForeground(new java.awt.Color(51, 153, 255));
         adminbtn3.setText("DOCTOR");
         adminbtn3.addActionListener(new java.awt.event.ActionListener() {
@@ -83,17 +82,12 @@ public class Index extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 153));
         jLabel5.setText("Copy@right");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, -1, 30));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 670, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel3.setForeground(new java.awt.Color(0, 51, 153));
         jLabel3.setText("Nayan Malakar & Nishat Jahan Tandra");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 650, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 51, 153));
-        jLabel2.setText("Department of CSE,JUST");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 670, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 680, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/hmbackground.png"))); // NOI18N
         jLabel6.setText("jLabel6");
@@ -168,7 +162,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton adminbtn2;
     private javax.swing.JButton adminbtn3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

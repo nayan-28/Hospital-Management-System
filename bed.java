@@ -52,7 +52,9 @@ public class bed extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         category = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,31 +67,31 @@ public class bed extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(0, 102, 204));
         jLabel35.setText("Bed Number");
-        panel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 104, -1, 35));
+        panel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 200, -1, 35));
 
         room.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 roomrefActionPerformed(evt);
             }
         });
-        panel2.add(room, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 223, 229, 35));
+        panel2.add(room, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 320, 229, 35));
 
         bedno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bednonameActionPerformed(evt);
             }
         });
-        panel2.add(bedno, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 107, 229, 32));
+        panel2.add(bedno, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 210, 229, 32));
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(0, 102, 204));
         jLabel36.setText("Room#");
-        panel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 221, -1, 35));
+        panel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 320, -1, 35));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(0, 102, 204));
         jLabel37.setText("Category");
-        panel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(844, 157, 110, 35));
+        panel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 260, 110, 35));
 
         jButton3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 102, 204));
@@ -160,14 +162,23 @@ public class bed extends javax.swing.JFrame {
         category.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         category.setForeground(new java.awt.Color(0, 204, 204));
         category.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Category", "ICU", "CCU", "Genernal Ward", "Emergency" }));
-        panel2.add(category, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 159, 229, 36));
+        panel2.add(category, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 260, 229, 36));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/BEDDETAILS.png"))); // NOI18N
         panel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/bed (2).jpg"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        panel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1330, 720));
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel25.setText("Copy@right");
+        panel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 610, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel24.setText("Nayan Malakar & Nishat Jahan Tandra");
+        panel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 610, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/bed (2).jpg"))); // NOI18N
+        panel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1260, 660));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -204,12 +215,12 @@ public class bed extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("insert into bed" + "(bid,category,room)" + " values(?,?,?)");
-            pst.setString(1, bedno.getText());
-            pst.setString(2, category.getSelectedItem().toString());
-            pst.setString(3, room.getText());
+            pst.setString(1,bedno.getText());
+            pst.setString(2,category.getSelectedItem().toString());
+            pst.setString(3,room.getText());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "BED Added Sucessfully");
+            JOptionPane.showMessageDialog(this,"BED Added Sucessfully");
             showTableData();
             bedno.setText(null);
             category.setSelectedIndex(0);
@@ -238,7 +249,7 @@ public class bed extends javax.swing.JFrame {
             PreparedStatement pst = conn.prepareStatement("delete from bed where bid=?");
             pst.setString(1, bedno.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this,"Deleted Sucessfully");
             showTableData();
             bedno.setText(null);
             category.setSelectedIndex(0);
@@ -260,7 +271,7 @@ public class bed extends javax.swing.JFrame {
             pst.setString(3, bedno.getText());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Updated Sucessfully");
             showTableData();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -324,11 +335,13 @@ public class bed extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel panel2;

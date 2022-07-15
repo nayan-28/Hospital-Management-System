@@ -55,7 +55,7 @@ public class SearchDoctor extends javax.swing.JFrame {
         age = new javax.swing.JTextField();
         gender = new javax.swing.JComboBox();
         bloodgroup = new javax.swing.JComboBox();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         status = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         joiningdate = new javax.swing.JTextField();
@@ -75,6 +75,8 @@ public class SearchDoctor extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         date = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         searchdoct = new javax.swing.JMenuBar();
         adddoc = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -108,7 +110,7 @@ public class SearchDoctor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 784, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -155,7 +157,7 @@ public class SearchDoctor extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel8.setText("CNIC");
+        jLabel8.setText("NID");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 55, 35));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -209,12 +211,12 @@ public class SearchDoctor extends javax.swing.JFrame {
         bloodgroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "A+", "A-", "B+", "B-" }));
         getContentPane().add(bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 290, 286, 33));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 202, 32));
 
         status.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         status.setForeground(new java.awt.Color(0, 204, 255));
@@ -333,8 +335,18 @@ public class SearchDoctor extends javax.swing.JFrame {
         });
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 520, 182, 32));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 650, -1, 30));
+
+        jLabel23.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel23.setText("Copy@right");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 650, -1, 30));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         adddoc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         adddoc.setText("Add Doctors");
@@ -443,9 +455,9 @@ public class SearchDoctor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void statusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusActionPerformed
         // TODO add your handling code here:
@@ -513,8 +525,8 @@ public class SearchDoctor extends javax.swing.JFrame {
                 gender.setSelectedItem(gen);
                 String add = rs.getString("address");
                 address.setText(add);
-                String CNIC = rs.getString("cnic");
-                cnic.setText(CNIC);
+                String NID = rs.getString("NID");
+                nid.setText(NID);
                 String bg = rs.getString("bloodgroup");
                 bloodgroup.setSelectedItem(bg);
                 String jdatey = rs.getString("joiningdate");
@@ -593,7 +605,6 @@ public class SearchDoctor extends javax.swing.JFrame {
     private javax.swing.JTextField age;
     private javax.swing.JComboBox bloodgroup;
     private javax.swing.JTextField city;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletedoc;
     private javax.swing.JTextField doctorid;
@@ -603,6 +614,7 @@ public class SearchDoctor extends javax.swing.JFrame {
     private javax.swing.JComboBox gender;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -616,6 +628,7 @@ public class SearchDoctor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -629,6 +642,7 @@ public class SearchDoctor extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JTextField joiningdate;
     private javax.swing.JTextField leavingdate;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField phoneno;
     private javax.swing.JButton search;
     private javax.swing.JMenu searchdoc;

@@ -57,7 +57,7 @@ public class DoctorDetails extends javax.swing.JFrame {
         gender = new javax.swing.JComboBox();
         jLabel15 = new javax.swing.JLabel();
         bloodgroup = new javax.swing.JComboBox();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         status = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         joiningdate = new javax.swing.JTextField();
@@ -76,7 +76,9 @@ public class DoctorDetails extends javax.swing.JFrame {
         timing = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         date = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         searchdoct = new javax.swing.JMenuBar();
         adddoc = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -106,7 +108,7 @@ public class DoctorDetails extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1096, 6, 43, 41));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 20, 1223, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 1150, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/doctor (4).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, 125));
@@ -114,68 +116,68 @@ public class DoctorDetails extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 204));
         jLabel3.setText("First Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 197, 105, 35));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 105, 35));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Doctor ID");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 112, -1, 35));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, 35));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 102, 204));
         jLabel5.setText("Blood Group");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 244, -1, 35));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, -1, 35));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 102, 204));
         jLabel6.setText("Age");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 253, 105, 35));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 105, 35));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 204));
         jLabel7.setText("Phone No.");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 406, 105, 35));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 105, 35));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 204));
         jLabel8.setText("NID");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 406, 55, 35));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 55, 35));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 102, 204));
         jLabel9.setText("Gender");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 315, -1, 35));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, 35));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 102, 204));
         jLabel11.setText("Joining Date");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 448, 105, 35));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 450, 105, 35));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 102, 204));
         jLabel12.setText("Second Name");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 197, -1, 35));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, 35));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 102, 204));
         jLabel13.setText("Address");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 365, 105, 35));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 105, 35));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 102, 204));
         jLabel14.setText("Maritial Status");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 459, 130, 35));
-        getContentPane().add(doctorid, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 112, 193, 32));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 130, 35));
+        getContentPane().add(doctorid, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 193, 32));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
-        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 368, 591, 32));
-        getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 200, 193, 32));
-        getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 200, 199, 32));
-        getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 256, 193, 32));
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 591, 32));
+        getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 193, 32));
+        getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 199, 32));
+        getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 193, 32));
 
         gender.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         gender.setForeground(new java.awt.Color(0, 204, 255));
@@ -185,24 +187,24 @@ public class DoctorDetails extends javax.swing.JFrame {
                 genderActionPerformed(evt);
             }
         });
-        getContentPane().add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 319, 192, 33));
+        getContentPane().add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 192, 33));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 102, 204));
         jLabel15.setText("Department");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 316, 118, 35));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 118, 35));
 
         bloodgroup.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         bloodgroup.setForeground(new java.awt.Color(0, 204, 255));
         bloodgroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" }));
-        getContentPane().add(bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 248, 199, 33));
+        getContentPane().add(bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, 199, 33));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 409, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 202, 32));
 
         status.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         status.setForeground(new java.awt.Color(0, 204, 255));
@@ -212,21 +214,21 @@ public class DoctorDetails extends javax.swing.JFrame {
                 statusActionPerformed(evt);
             }
         });
-        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 463, 192, 33));
+        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 192, 33));
 
         phoneno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phonenoActionPerformed(evt);
             }
         });
-        getContentPane().add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(778, 409, 182, 32));
+        getContentPane().add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 182, 32));
 
         joiningdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 joiningdateActionPerformed(evt);
             }
         });
-        getContentPane().add(joiningdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1126, 448, 182, 32));
+        getContentPane().add(joiningdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 450, 182, 32));
 
         adddoctor.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         adddoctor.setForeground(new java.awt.Color(0, 102, 204));
@@ -237,7 +239,7 @@ public class DoctorDetails extends javax.swing.JFrame {
                 adddoctorActionPerformed(evt);
             }
         });
-        getContentPane().add(adddoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 546, 160, 49));
+        getContentPane().add(adddoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 550, 160, 49));
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 102, 204));
@@ -247,55 +249,55 @@ public class DoctorDetails extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 108, 49));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 108, 49));
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 204));
         jLabel16.setText("Leaving Date");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 500, 105, 35));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 500, 105, 35));
 
         city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cityActionPerformed(evt);
             }
         });
-        getContentPane().add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(778, 462, 182, 32));
+        getContentPane().add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 182, 32));
 
         leavingdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 leavingdateActionPerformed(evt);
             }
         });
-        getContentPane().add(leavingdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 500, 182, 32));
+        getContentPane().add(leavingdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 500, 182, 32));
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 102, 204));
         jLabel17.setText("Password");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 246, 105, 35));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 250, 105, 35));
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 102, 204));
         jLabel18.setText("City");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 459, 105, 35));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 105, 35));
 
         doctoruser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doctoruserActionPerformed(evt);
             }
         });
-        getContentPane().add(doctoruser, new org.netbeans.lib.awtextra.AbsoluteConstraints(1126, 202, 182, 32));
+        getContentPane().add(doctoruser, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 200, 182, 32));
 
         doctorpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doctorpasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(doctorpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1126, 249, 182, 32));
+        getContentPane().add(doctorpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 250, 182, 32));
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 204));
         jLabel19.setText("Username");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 199, 105, 35));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, 105, 35));
 
         specialization.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         specialization.setForeground(new java.awt.Color(0, 204, 255));
@@ -311,24 +313,24 @@ public class DoctorDetails extends javax.swing.JFrame {
                 specializationMouseReleased(evt);
             }
         });
-        getContentPane().add(specialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 316, 199, 38));
+        getContentPane().add(specialization, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 199, 38));
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 102, 204));
         jLabel20.setText("Visit Timing");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 310, 105, 35));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 310, 105, 35));
 
         timing.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timingActionPerformed(evt);
             }
         });
-        getContentPane().add(timing, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 320, 182, 32));
+        getContentPane().add(timing, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 320, 182, 32));
 
         jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 102, 204));
         jLabel21.setText("Days");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 380, 105, 35));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 105, 35));
 
         date.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
@@ -340,10 +342,20 @@ public class DoctorDetails extends javax.swing.JFrame {
                 dateActionPerformed(evt);
             }
         });
-        getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 380, 182, 32));
+        getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 380, 182, 32));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 1290, 720));
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 650, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel25.setText("Copy@right");
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, -1, -1));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         adddoc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         adddoc.setText("Add Doctors");
@@ -446,9 +458,9 @@ public class DoctorDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void statusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusActionPerformed
         // TODO add your handling code here:
@@ -467,7 +479,7 @@ public class DoctorDetails extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("insert into doctor" + "(D_id,firstname,secondname,age,bloodgroup,gender,address,cnic,maritialstatus,city,specialization,phoneno,joiningdate,leavingdate,username,password,timing,days)" + " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = conn.prepareStatement("insert into doctor" + "(D_id,firstname,secondname,age,bloodgroup,gender,address,NID,maritialstatus,city,specialization,phoneno,joiningdate,leavingdate,username,password,timing,days)" + " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
             //FileInputStream is = new FileInputStream(new File(s));
             pst.setString(1, doctorid.getText());
@@ -477,7 +489,7 @@ public class DoctorDetails extends javax.swing.JFrame {
             pst.setString(5, (String) bloodgroup.getSelectedItem());
             pst.setString(6, (String) gender.getSelectedItem());
             pst.setString(7, address.getText());
-            pst.setString(8, cnic.getText());
+            pst.setString(8, nid.getText());
             pst.setString(9, (String) status.getSelectedItem());
             pst.setString(10, city.getText());
             pst.setString(11, (String) specialization.getSelectedItem());
@@ -489,14 +501,14 @@ public class DoctorDetails extends javax.swing.JFrame {
             pst.setString(17, timing.getText());
             pst.setString(18, date.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Inserted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Saved Sucessfully");
             doctorid.setText(null);
             doctorid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             specialization.setSelectedIndex(0);
             phoneno.setText(null);
             joiningdate.setText(null);
@@ -521,7 +533,7 @@ public class DoctorDetails extends javax.swing.JFrame {
         secondname.setText(null);
         age.setText(null);
         address.setText(null);
-        cnic.setText(null);
+        nid.setText(null);
         specialization.setSelectedIndex(0);
         phoneno.setText(null);
         joiningdate.setText(null);
@@ -641,7 +653,6 @@ public class DoctorDetails extends javax.swing.JFrame {
     private javax.swing.JTextField age;
     private javax.swing.JComboBox bloodgroup;
     private javax.swing.JTextField city;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletedoc;
     private javax.swing.JTextField doctorid;
@@ -652,7 +663,6 @@ public class DoctorDetails extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -665,6 +675,9 @@ public class DoctorDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -678,6 +691,7 @@ public class DoctorDetails extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JTextField joiningdate;
     private javax.swing.JTextField leavingdate;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField phoneno;
     private javax.swing.JMenu searchdoc;
     private javax.swing.JMenuBar searchdoct;

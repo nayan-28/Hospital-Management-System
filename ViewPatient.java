@@ -45,9 +45,9 @@ public class ViewPatient extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         search = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         searchpatient = new javax.swing.JMenuBar();
         addpatient = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -82,7 +82,7 @@ public class ViewPatient extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 815, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -97,7 +97,7 @@ public class ViewPatient extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 1179, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 1160, -1));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 165, -1));
 
         patienttable.setModel(new javax.swing.table.DefaultTableModel(
@@ -120,13 +120,13 @@ public class ViewPatient extends javax.swing.JFrame {
         patienttable.setEnabled(false);
         jScrollPane1.setViewportView(patienttable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1350, 420));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1330, 420));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 102, 255));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/search.png"))); // NOI18N
         jLabel11.setText("Search");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,25 +138,23 @@ public class ViewPatient extends javax.swing.JFrame {
                 searchKeyReleased(evt);
             }
         });
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 150, 40));
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 150, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/DOCTORDETAILS (2).png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 600, -1, -1));
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel25.setText("Copy@right");
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 650, -1, -1));
 
-        jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel19.setText("Copy@right");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 580, -1, -1));
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel24.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 650, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel23.setText("Department of CSE,JUST");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 620, -1, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         addpatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addpatient.setText("Add Patient");
@@ -223,7 +221,7 @@ public class ViewPatient extends javax.swing.JFrame {
 
         setJMenuBar(searchpatient);
 
-        setBounds(0, 0, 1366, 680);
+        setBounds(0, 0, 1353, 728);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addpatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addpatientMouseClicked
@@ -336,11 +334,11 @@ public class ViewPatient extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

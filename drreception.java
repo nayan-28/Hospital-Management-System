@@ -219,7 +219,7 @@ public class drreception extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.doctor where firstname=?");
+            PreparedStatement pst = conn.prepareStatement("SELECT D_id,firstname,secondname,age,maritialstatus,city,specialization,timing,days FROM hospitalmanagementsystem.doctor where firstname=?");
             pst.setString(1, DRNAME.getText());
             ResultSet rs = pst.executeQuery();
             apTable.setModel(DbUtils.resultSetToTableModel(rs));

@@ -54,7 +54,9 @@ public class DepartmentDetails extends javax.swing.JFrame {
         dno = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         search = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,7 +95,7 @@ public class DepartmentDetails extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 73, 1280, -1));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1280, -1));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 172));
 
         depttable.setModel(new javax.swing.table.DefaultTableModel(
@@ -128,7 +130,7 @@ public class DepartmentDetails extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(depttable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 178, 1203, 186));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 1203, 186));
 
         adddept.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         adddept.setForeground(new java.awt.Color(0, 102, 255));
@@ -138,7 +140,7 @@ public class DepartmentDetails extends javax.swing.JFrame {
                 adddeptActionPerformed(evt);
             }
         });
-        getContentPane().add(adddept, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 596, 274, 59));
+        getContentPane().add(adddept, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 610, 274, 59));
 
         updatedept.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         updatedept.setForeground(new java.awt.Color(0, 102, 255));
@@ -148,7 +150,7 @@ public class DepartmentDetails extends javax.swing.JFrame {
                 updatedeptActionPerformed(evt);
             }
         });
-        getContentPane().add(updatedept, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 596, 274, 59));
+        getContentPane().add(updatedept, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 610, 274, 59));
 
         deldept.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         deldept.setForeground(new java.awt.Color(0, 102, 255));
@@ -158,7 +160,7 @@ public class DepartmentDetails extends javax.swing.JFrame {
                 deldeptActionPerformed(evt);
             }
         });
-        getContentPane().add(deldept, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 596, 274, 59));
+        getContentPane().add(deldept, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, 274, 59));
         getContentPane().add(dname, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 442, 280, 35));
         getContentPane().add(ddiscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 489, 594, 35));
 
@@ -195,8 +197,18 @@ public class DepartmentDetails extends javax.swing.JFrame {
         });
         getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 542, 278, 35));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1300, -1));
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel19.setText("Copy@right");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 670, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 670, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/d3.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -347,7 +359,9 @@ public class DepartmentDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

@@ -58,14 +58,16 @@ public class PatientDetails extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         martialstatus = new javax.swing.JComboBox();
         date = new javax.swing.JTextField();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         patienttype = new javax.swing.JComboBox();
         phoneno = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         bedno = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         searchpatient = new javax.swing.JMenuBar();
         addpatient = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -206,12 +208,12 @@ public class PatientDetails extends javax.swing.JFrame {
         getContentPane().add(martialstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(833, 252, 171, 33));
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 320, 187, 32));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 452, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 452, 202, 32));
 
         patienttype.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         patienttype.setForeground(new java.awt.Color(0, 204, 255));
@@ -258,8 +260,18 @@ public class PatientDetails extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/ADD (6).png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 41, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel22.setText("Nayan Malakar & Nishat Jahan Tandra");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 640, -1, 30));
+
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 51, 153));
+        jLabel19.setText("Copy@right");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 640, -1, 30));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         addpatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addpatient.setText("Add Patient");
@@ -372,9 +384,9 @@ public class PatientDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addressActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void genderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderActionPerformed
         // TODO add your handling code here:
@@ -417,7 +429,7 @@ public class PatientDetails extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("insert into patient" + "(P_id,FirstName,SecondName,Age,MaritialStatus,Gender,Address,CNIC,PatientType,Date,PhoneNo,BedNo)" + " values(?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = conn.prepareStatement("insert into patient" + "(P_id,FirstName,SecondName,Age,MaritialStatus,Gender,Address,NID,PatientType,Date,PhoneNo,BedNo)" + " values(?,?,?,?,?,?,?,?,?,?,?,?)");
             pst.setString(1, patientid.getText());
             pst.setString(2, firstname.getText());
             pst.setString(3, secondname.getText());
@@ -425,11 +437,16 @@ public class PatientDetails extends javax.swing.JFrame {
             pst.setString(5, (String) martialstatus.getSelectedItem());
             pst.setString(6, (String) gender.getSelectedItem());
             pst.setString(7, address.getText());
-            pst.setString(8, cnic.getText());
+            pst.setString(8, nid.getText());
             pst.setString(9, (String) patienttype.getSelectedItem());
             pst.setString(10, date.getText());
             pst.setString(11, phoneno.getText());
             pst.setString(12, bedno.getSelectedItem().toString());
+            Object o = bedno.getSelectedItem();
+            bedno.removeItem(o);
+            if (bedno.getSelectedIndex() == -1) {
+                JOptionPane.showMessageDialog(this,"BEDS FULL");
+            }
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Added Sucessfully");
             patientid.setText(null);
@@ -437,13 +454,14 @@ public class PatientDetails extends javax.swing.JFrame {
             secondname.setText(null);
             age.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             date.setText(null);
             phoneno.setText(null);
             bedno.setSelectedIndex(0);
             gender.setSelectedIndex(0);
             martialstatus.setSelectedIndex(0);
             patienttype.setSelectedIndex(0);
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
@@ -457,7 +475,7 @@ public class PatientDetails extends javax.swing.JFrame {
         secondname.setText(null);
         age.setText(null);
         address.setText(null);
-        cnic.setText(null);
+        nid.setText(null);
         date.setText(null);
         phoneno.setText(null);
         bedno.setSelectedIndex(0);
@@ -523,7 +541,6 @@ public class PatientDetails extends javax.swing.JFrame {
     private javax.swing.JTextField address;
     private javax.swing.JTextField age;
     private javax.swing.JComboBox bedno;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletepatient;
     private javax.swing.JTextField firstname;
@@ -538,8 +555,10 @@ public class PatientDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -553,6 +572,7 @@ public class PatientDetails extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JComboBox martialstatus;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField patientid;
     private javax.swing.JComboBox patienttype;
     private javax.swing.JTextField phoneno;

@@ -46,7 +46,7 @@ public class Bill extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         date = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         phoneno = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -136,12 +136,12 @@ public class Bill extends javax.swing.JFrame {
         jLabel8.setText("NID");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 55, 35));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 202, 32));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 204));
@@ -191,7 +191,7 @@ public class Bill extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 204));
-        jButton1.setText("Print");
+        jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -300,8 +300,8 @@ public class Bill extends javax.swing.JFrame {
                 secondname.setText(sname);
                 String age1 = rs.getString("Age");
                 age.setText(age1);
-                String CNIC = rs.getString("CNIC");
-                cnic.setText(CNIC);
+                String NID = rs.getString("NID");
+                nid.setText(NID);
                 String datey = rs.getString("Date");
                 date.setText(datey);
                 String pno = rs.getString("Phoneno");
@@ -318,9 +318,9 @@ public class Bill extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_firstnameActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void phonenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phonenoActionPerformed
         // TODO add your handling code here:
@@ -354,7 +354,7 @@ public class Bill extends javax.swing.JFrame {
                 text.setText(text.getText() + "Patient Name:                            " + rs.getString("FirstName") + " " + rs.getString("SecondName"));
                 text.setText(text.getText() + "\nPatient Age:                               " + rs.getString("Age"));
                 text.setText(text.getText() + "\nGender:                                     " + rs.getString("Gender"));
-                text.setText(text.getText() + "\nNID:                                           " + rs.getString("CNIC"));
+                text.setText(text.getText() + "\nNID:                                           " + rs.getString("NID"));
                 text.setText(text.getText() + "\nMobile Number:                         " + rs.getString("Phoneno"));
                 text.setText(text.getText() + "\nPatient Type:                             " + rs.getString("PatientType"));
                 text.setText(text.getText() + "\nDisease:                                    " + rs.getString("disease"));
@@ -468,7 +468,6 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JTextField Reldate;
     private javax.swing.JMenu addpatient;
     private javax.swing.JTextField age;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField date;
     private javax.swing.JMenu deletepatient;
     private javax.swing.JTextField firstname;
@@ -489,6 +488,7 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField patientid;
     private javax.swing.JTextField phoneno;
     private javax.swing.JButton search;

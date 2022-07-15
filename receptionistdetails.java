@@ -54,7 +54,7 @@ public class receptionistdetails extends javax.swing.JFrame {
         firstname = new javax.swing.JTextField();
         address = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        cnic = new javax.swing.JTextField();
+        nid = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         city = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
@@ -71,7 +71,7 @@ public class receptionistdetails extends javax.swing.JFrame {
         username = new javax.swing.JTextField();
         search = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -109,7 +109,7 @@ public class receptionistdetails extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 1120, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 1110, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/RECETIONISTDETAILS.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, 166));
@@ -117,8 +117,8 @@ public class receptionistdetails extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("RECEPTIONIST ID");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 139, -1, 35));
-        getContentPane().add(rid, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 147, 166, 32));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, 35));
+        getContentPane().add(rid, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 166, 32));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 204));
@@ -128,7 +128,7 @@ public class receptionistdetails extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 102, 204));
         jLabel6.setText("Age");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 185, 105, 35));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 105, 35));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 102, 204));
@@ -138,7 +138,7 @@ public class receptionistdetails extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 102, 204));
         jLabel9.setText("Gender");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 226, -1, 35));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, -1, 35));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 102, 204));
@@ -153,44 +153,44 @@ public class receptionistdetails extends javax.swing.JFrame {
                 genderActionPerformed(evt);
             }
         });
-        getContentPane().add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(652, 229, 192, 33));
-        getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 187, 193, 32));
-        getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 197, 193, 32));
+        getContentPane().add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 192, 33));
+        getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 193, 32));
+        getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 193, 32));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
-        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 349, 538, 32));
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 349, 320, 32));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 204));
         jLabel8.setText("NID");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 394, 55, 35));
 
-        cnic.addActionListener(new java.awt.event.ActionListener() {
+        nid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnicActionPerformed(evt);
+                nidActionPerformed(evt);
             }
         });
-        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 394, 202, 32));
+        getContentPane().add(nid, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 394, 202, 32));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 204));
         jLabel7.setText("City");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 105, 35));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 105, 35));
 
         city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cityActionPerformed(evt);
             }
         });
-        getContentPane().add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 290, 189, 32));
+        getContentPane().add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 300, 189, 32));
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel18.setText("Phone no");
+        jLabel18.setText("Phone");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 303, 105, 35));
 
         phoneno.addActionListener(new java.awt.event.ActionListener() {
@@ -198,8 +198,8 @@ public class receptionistdetails extends javax.swing.JFrame {
                 phonenoActionPerformed(evt);
             }
         });
-        getContentPane().add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 305, 193, 32));
-        getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 250, 193, 32));
+        getContentPane().add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 193, 32));
+        getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 193, 32));
 
         adddoctor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         adddoctor.setForeground(new java.awt.Color(0, 102, 204));
@@ -209,7 +209,7 @@ public class receptionistdetails extends javax.swing.JFrame {
                 adddoctorActionPerformed(evt);
             }
         });
-        getContentPane().add(adddoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 479, 211, 49));
+        getContentPane().add(adddoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 211, 49));
 
         jButton4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 102, 204));
@@ -219,7 +219,7 @@ public class receptionistdetails extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 546, 211, 49));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 211, 49));
 
         update.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         update.setForeground(new java.awt.Color(0, 102, 204));
@@ -229,7 +229,7 @@ public class receptionistdetails extends javax.swing.JFrame {
                 updateActionPerformed(evt);
             }
         });
-        getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 613, 206, 49));
+        getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 650, 206, 49));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -255,19 +255,19 @@ public class receptionistdetails extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 479, 1004, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 520, 1004, 180));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 102, 204));
         jLabel10.setText("Password");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 441, -1, -1));
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 180, 29));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 410, 190, 29));
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 204));
         jLabel19.setText("username");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, -1, -1));
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, 178, 32));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 360, -1, -1));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 190, 32));
 
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,15 +279,15 @@ public class receptionistdetails extends javax.swing.JFrame {
                 searchKeyReleased(evt);
             }
         });
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 438, 202, 32));
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 100, 32));
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 102, 204));
         jLabel20.setText("SEARCH");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 438, 75, 35));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, 35));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/recept.back.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -110, -1, 820));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/back1.jpg"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -306,9 +306,9 @@ public class receptionistdetails extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addressActionPerformed
 
-    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+    private void nidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cnicActionPerformed
+    }//GEN-LAST:event_nidActionPerformed
 
     private void cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityActionPerformed
         // TODO add your handling code here:
@@ -333,13 +333,13 @@ public class receptionistdetails extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("insert into receptionist" + "(R_id,firstname,secondname,address,cnic,age,gender,phoneno,city,username,password)" + " values(?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = conn.prepareStatement("insert into receptionist" + "(R_id,firstname,secondname,address,NID,age,gender,phoneno,city,username,password)" + " values(?,?,?,?,?,?,?,?,?,?,?)");
             //FileInputStream is = new FileInputStream(new File(s));
             pst.setString(1, rid.getText());
             pst.setString(2, firstname.getText());
             pst.setString(3, secondname.getText());
             pst.setString(4, address.getText());
-            pst.setString(5, cnic.getText());
+            pst.setString(5, nid.getText());
             pst.setString(6, age.getText());
             pst.setString(7, (String) gender.getSelectedItem());
             pst.setString(8, phoneno.getText());
@@ -349,13 +349,13 @@ public class receptionistdetails extends javax.swing.JFrame {
             pst.setString(11, password.getText());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Saved Sucessfully");
+            JOptionPane.showMessageDialog(this, "Saved Sucessfully");
             showTableData();
             rid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             age.setText(null);
             gender.setSelectedIndex(0);
             phoneno.setText(null);
@@ -380,7 +380,7 @@ public class receptionistdetails extends javax.swing.JFrame {
             firstname.setText(null);
             secondname.setText(null);
             address.setText(null);
-            cnic.setText(null);
+            nid.setText(null);
             age.setText(null);
             gender.setSelectedIndex(0);
             phoneno.setText(null);
@@ -398,12 +398,12 @@ public class receptionistdetails extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("UPDATE receptionist SET firstname=?,secondname=?,address=?,cnic=?,age=?,gender=?,phoneno=?,city=?,username=?,password=? WHERE R_id=?");
+            PreparedStatement pst = conn.prepareStatement("UPDATE receptionist SET firstname=?,secondname=?,address=?,NID=?,age=?,gender=?,phoneno=?,city=?,username=?,password=? WHERE R_id=?");
 
             pst.setString(1, firstname.getText());
             pst.setString(2, secondname.getText());
             pst.setString(3, address.getText());
-            pst.setString(4, cnic.getText());
+            pst.setString(4, nid.getText());
             pst.setString(5, age.getText());
             pst.setString(6, (String) gender.getSelectedItem());
             pst.setString(7, phoneno.getText());
@@ -412,7 +412,7 @@ public class receptionistdetails extends javax.swing.JFrame {
             pst.setString(10, password.getText());
             pst.setString(11, rid.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Updated Sucessfully");
             showTableData();
 
         } catch (Exception e) {
@@ -427,7 +427,7 @@ public class receptionistdetails extends javax.swing.JFrame {
         firstname.setText(table.getValueAt(SelectedRow, 1).toString());
         secondname.setText(table.getValueAt(SelectedRow, 2).toString());
         address.setText(table.getValueAt(SelectedRow, 3).toString());
-        cnic.setText(table.getValueAt(SelectedRow, 4).toString());
+        nid.setText(table.getValueAt(SelectedRow, 4).toString());
         age.setText(table.getValueAt(SelectedRow, 5).toString());
         gender.setSelectedItem(table.getValueAt(SelectedRow, 6).toString());
         phoneno.setText(table.getValueAt(SelectedRow, 7).toString());
@@ -488,13 +488,13 @@ public class receptionistdetails extends javax.swing.JFrame {
     private javax.swing.JTextField address;
     private javax.swing.JTextField age;
     private javax.swing.JTextField city;
-    private javax.swing.JTextField cnic;
     private javax.swing.JTextField firstname;
     private javax.swing.JComboBox gender;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel18;
@@ -503,7 +503,6 @@ public class receptionistdetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -511,6 +510,7 @@ public class receptionistdetails extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField nid;
     private javax.swing.JTextField password;
     private javax.swing.JTextField phoneno;
     private javax.swing.JTextField rid;
