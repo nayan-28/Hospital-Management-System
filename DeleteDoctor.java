@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class DeleteDoctor extends javax.swing.JFrame {
 
@@ -495,7 +495,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("select *from doctor where D_id=?");
             pst.setString(1, doctorid.getText());
             ResultSet rs = pst.executeQuery();
@@ -545,7 +545,7 @@ public class DeleteDoctor extends javax.swing.JFrame {
     private void combo() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
 
             PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.department");
             ResultSet rs = pst.executeQuery();

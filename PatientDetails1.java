@@ -16,7 +16,7 @@ import net.proteanit.sql.DbUtils;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class PatientDetails1 extends javax.swing.JFrame {
 

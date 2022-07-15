@@ -1,27 +1,27 @@
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author NAYAN MALAKAR
  */
-public class bill extends javax.swing.JFrame {
+public class Bill extends javax.swing.JFrame {
 
     /**
-     * Creates new form bill
+     * Creates new form Bill
      */
-    public bill() {
+    public Bill() {
         initComponents();
     }
 
@@ -34,95 +34,400 @@ public class bill extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel35 = new javax.swing.JLabel();
-        name2 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        l1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        l2 = new javax.swing.JLabel();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        l3 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        l4 = new javax.swing.JLabel();
-        l5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        jLabel35.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel35.setText("Name Of Tablet");
-
-        name2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                name2nameActionPerformed(evt);
-            }
-        });
+        jLabel4 = new javax.swing.JLabel();
+        patientid = new javax.swing.JTextField();
+        search = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        firstname = new javax.swing.JTextField();
+        secondname = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        age = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        date = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        cnic = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        phoneno = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        text = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        Reldate = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        Dfee = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        Bfee = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        searchpatient = new javax.swing.JMenuBar();
+        addpatient = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        deletepatient = new javax.swing.JMenu();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        spatient = new javax.swing.JMenu();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        updatepatient = new javax.swing.JMenu();
+        viewpatient = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 19, 21, 21));
 
-        l1.setText("jLabel1");
-        getContentPane().add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 19, 103, 32));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setText("AB Hospital");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(767, 6, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 204, 255));
-        jButton1.setText("GENERATE MEDICINES");
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel4.setText("Patient ID");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 55, -1, 35));
+
+        patientid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patientidActionPerformed(evt);
+            }
+        });
+        getContentPane().add(patientid, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 55, 99, 32));
+
+        search.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        search.setForeground(new java.awt.Color(0, 102, 204));
+        search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/search.png"))); // NOI18N
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 55, 42, 32));
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel3.setText("Name");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 121, 105, 35));
+
+        firstname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstnameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 138, 32));
+        getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 146, 32));
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel6.setText("Age");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 188, 105, 35));
+        getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 138, 32));
+
+        jLabel15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel15.setText("Date");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 255, 48, 35));
+
+        date.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateActionPerformed(evt);
+            }
+        });
+        getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 138, 32));
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel8.setText("NID");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 55, 35));
+
+        cnic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cnicActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 202, 32));
+
+        jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel7.setText("Phone No.");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 390, 105, 35));
+
+        phoneno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                phonenoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(phoneno, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 202, 32));
+
+        text.setEditable(false);
+        text.setColumns(20);
+        text.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        text.setForeground(new java.awt.Color(0, 102, 255));
+        text.setRows(5);
+        text.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jScrollPane1.setViewportView(text);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 50, 590, 590));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel2.setText("Discharge Date");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 447, -1, -1));
+
+        Reldate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReldateActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Reldate, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 443, 190, 31));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel5.setText("Doctor's Fee");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 490, -1, -1));
+        getContentPane().add(Dfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 486, 190, 30));
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel9.setText("Bed Fee");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 532, -1, -1));
+        getContentPane().add(Bfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 528, 190, 30));
+
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 102, 204));
+        jButton1.setText("Print");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 49, -1, 52));
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 69, 21, 21));
-        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 124, 21, 21));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 619, -1, -1));
 
-        l2.setText("jLabel1");
-        getContentPane().add(l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 69, 103, 32));
-        getContentPane().add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 185, 21, 21));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/D3 (1).jpg"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        l3.setText("jLabel1");
-        getContentPane().add(l3, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 124, 103, 32));
-        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 234, 21, 21));
+        addpatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addpatient.setText("Add Patient");
+        addpatient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addpatientMouseClicked(evt);
+            }
+        });
+        addpatient.add(jSeparator1);
 
-        l4.setText("jLabel1");
-        getContentPane().add(l4, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 174, 103, 32));
+        searchpatient.add(addpatient);
 
-        l5.setText("jLabel1");
-        getContentPane().add(l5, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 223, 103, 32));
+        deletepatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        deletepatient.setText("Delete Patient");
+        deletepatient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deletepatientMouseClicked(evt);
+            }
+        });
+        deletepatient.add(jSeparator3);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/medbackground_1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        searchpatient.add(deletepatient);
+
+        spatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        spatient.setText("Search Patient");
+        spatient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                spatientMouseClicked(evt);
+            }
+        });
+        spatient.add(jSeparator2);
+
+        searchpatient.add(spatient);
+
+        updatepatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        updatepatient.setText("Update Patient");
+        updatepatient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updatepatientMouseClicked(evt);
+            }
+        });
+        updatepatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatepatientActionPerformed(evt);
+            }
+        });
+        searchpatient.add(updatepatient);
+
+        viewpatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        viewpatient.setText("View Patient");
+        viewpatient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                viewpatientMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                viewpatientMouseEntered(evt);
+            }
+        });
+        viewpatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewpatientActionPerformed(evt);
+            }
+        });
+        searchpatient.add(viewpatient);
+
+        jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 0), null, null));
+        jMenu1.setText("Make Bill");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        searchpatient.add(jMenu1);
+
+        setJMenuBar(searchpatient);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void name2nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name2nameActionPerformed
+    private void patientidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_name2nameActionPerformed
+    }//GEN-LAST:event_patientidActionPerformed
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+            PreparedStatement pst = conn.prepareStatement("select *from patient where P_id=?");
+            pst.setString(1,patientid.getText());
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                String fname = rs.getString("FirstName");
+                firstname.setText(fname);
+                String sname = rs.getString("SecondName");
+                secondname.setText(sname);
+                String age1 = rs.getString("Age");
+                age.setText(age1);
+                String CNIC = rs.getString("CNIC");
+                cnic.setText(CNIC);
+                String datey = rs.getString("Date");
+                date.setText(datey);
+                String pno = rs.getString("Phoneno");
+                phoneno.setText(pno);
+            } else {
+                JOptionPane.showMessageDialog(null, "No Specific Id Found");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_searchActionPerformed
+
+    private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstnameActionPerformed
+
+    private void cnicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnicActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnicActionPerformed
+
+    private void phonenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phonenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phonenoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       try {
+
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
-            PreparedStatement pst = conn.prepareStatement( "SELECT name FROM hospitalmanagementsystem.medicine");
-        
-            
-            ResultSet rs=pst.executeQuery();
-            while(rs.next()){
-               
-  l1.setText(rs.getString("name"));
-              l2.setText(rs.getString("name".charAt(2))); 
-              l3.setText(rs.getString("name"));
-              l4.setText(rs.getString("name"));
-              l5.setText(rs.getString("name"));
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+            PreparedStatement pst = conn.prepareStatement("select *from patient where P_id=?");
+            pst.setString(1, patientid.getText());
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                int n1 = Integer.parseInt((Dfee.getText()));
+                int n2 = Integer.parseInt((Bfee.getText()));
+                long cost,cost1;
+                long daysDiff;
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+                Date dateBefore = sdf.parse(date.getText());
+                Date dateAfter = sdf.parse(Reldate.getText());
+                long timeDiff = Math.abs(dateAfter.getTime() - dateBefore.getTime());
+                daysDiff = TimeUnit.DAYS.convert(timeDiff, TimeUnit.MILLISECONDS);
+                cost1= n2 * daysDiff;
+                cost = n1 +cost1;
+                
+                
+                
+                text.setText(" **********************AB Hospital*********************\n");
+                text.setText(text.getText() + "Patient Name:                            " + rs.getString("FirstName") + " " + rs.getString("SecondName"));
+                text.setText(text.getText() + "\nPatient Age:                               " + rs.getString("Age"));
+                text.setText(text.getText() + "\nGender:                                     " + rs.getString("Gender"));
+                text.setText(text.getText() + "\nNID:                                           " + rs.getString("CNIC"));
+                text.setText(text.getText() + "\nMobile Number:                         " + rs.getString("Phoneno"));
+                text.setText(text.getText() + "\nPatient Type:                             " + rs.getString("PatientType"));
+                text.setText(text.getText() + "\nDisease:                                    " + rs.getString("disease"));
+                text.setText(text.getText() + "\nDays:                                        " + daysDiff);
+                text.setText(text.getText() + "\nDoctor Fee's:                             " + Dfee.getText() + "  Taka");
+                text.setText(text.getText() + "\nBed Fee's:                                 " + cost1 + "  Taka");
+                text.setText(text.getText() + "\n____________________________________");
+                text.setText(text.getText() + "\nTotal Cost :                                " + cost + "  Taka");
+                text.setText(text.getText() + "\n\n\n Checked by authority");
+            } else {
+                JOptionPane.showMessageDialog(null, "No Specific Id Found");
             }
-            }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateActionPerformed
+
+    }//GEN-LAST:event_dateActionPerformed
+
+    private void ReldateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReldateActionPerformed
+
+    }//GEN-LAST:event_ReldateActionPerformed
+
+    private void addpatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addpatientMouseClicked
+        PatientDetails pd = new PatientDetails();
+        pd.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addpatientMouseClicked
+
+    private void deletepatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deletepatientMouseClicked
+        DeletePatient dp = new DeletePatient();
+        dp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_deletepatientMouseClicked
+
+    private void spatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spatientMouseClicked
+        SearchPatient sp = new SearchPatient();
+        sp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_spatientMouseClicked
+
+    private void updatepatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updatepatientMouseClicked
+        UpdatePatient up = new UpdatePatient();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_updatepatientMouseClicked
+
+    private void updatepatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatepatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updatepatientActionPerformed
+
+    private void viewpatientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewpatientMouseClicked
+        ViewPatient vp = new ViewPatient();
+        vp.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_viewpatientMouseClicked
+
+    private void viewpatientMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewpatientMouseEntered
+
+    }//GEN-LAST:event_viewpatientMouseEntered
+
+    private void viewpatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewpatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewpatientActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        Bill mb = new Bill();
+        mb.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -141,36 +446,57 @@ public class bill extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new bill().setVisible(true);
+            new Bill().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Bfee;
+    private javax.swing.JTextField Dfee;
+    private javax.swing.JTextField Reldate;
+    private javax.swing.JMenu addpatient;
+    private javax.swing.JTextField age;
+    private javax.swing.JTextField cnic;
+    private javax.swing.JTextField date;
+    private javax.swing.JMenu deletepatient;
+    private javax.swing.JTextField firstname;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel l1;
-    private javax.swing.JLabel l2;
-    private javax.swing.JLabel l3;
-    private javax.swing.JLabel l4;
-    private javax.swing.JLabel l5;
-    private javax.swing.JTextField name2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JTextField patientid;
+    private javax.swing.JTextField phoneno;
+    private javax.swing.JButton search;
+    private javax.swing.JMenuBar searchpatient;
+    private javax.swing.JTextField secondname;
+    private javax.swing.JMenu spatient;
+    private javax.swing.JTextArea text;
+    private javax.swing.JMenu updatepatient;
+    private javax.swing.JMenu viewpatient;
     // End of variables declaration//GEN-END:variables
 }

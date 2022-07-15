@@ -1,11 +1,8 @@
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -19,7 +16,7 @@ import net.proteanit.sql.DbUtils;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class DepartmentDetails extends javax.swing.JFrame {
 

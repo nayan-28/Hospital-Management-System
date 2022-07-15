@@ -121,7 +121,7 @@ public class selectdoctor extends javax.swing.JFrame {
 
         dASearchbtn1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         dASearchbtn1.setForeground(new java.awt.Color(0, 102, 255));
-        dASearchbtn1.setText("SUBMIT");
+        dASearchbtn1.setText("NEXT");
         dASearchbtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dASearchbtn1MouseClicked(evt);

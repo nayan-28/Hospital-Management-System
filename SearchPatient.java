@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.*;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class SearchPatient extends javax.swing.JFrame {
 
@@ -75,6 +74,7 @@ public class SearchPatient extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         updatepatient = new javax.swing.JMenu();
         viewpatient = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -144,7 +144,7 @@ public class SearchPatient extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel8.setText("CNIC");
+        jLabel8.setText("NID");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 55, 35));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -166,6 +166,12 @@ public class SearchPatient extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(0, 102, 204));
         jLabel14.setText("Patient Type");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 105, 35));
+
+        patientid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patientidActionPerformed(evt);
+            }
+        });
         getContentPane().add(patientid, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 193, 32));
 
         address.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +180,12 @@ public class SearchPatient extends javax.swing.JFrame {
             }
         });
         getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 539, 32));
+
+        firstname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstnameActionPerformed(evt);
+            }
+        });
         getContentPane().add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 193, 32));
         getContentPane().add(secondname, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 160, 146, 32));
         getContentPane().add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 193, 32));
@@ -264,7 +276,7 @@ public class SearchPatient extends javax.swing.JFrame {
         jLabel23.setText("Department of CSE,JUST");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 650, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/backgroundpatiennt.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/patientbackground1.jpg"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         addpatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -320,6 +332,15 @@ public class SearchPatient extends javax.swing.JFrame {
             }
         });
         searchpatient.add(viewpatient);
+
+        jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 0), null, null));
+        jMenu1.setText("Make Bill");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        searchpatient.add(jMenu1);
 
         setJMenuBar(searchpatient);
 
@@ -439,10 +460,9 @@ public class SearchPatient extends javax.swing.JFrame {
             pst.setString(8, (String) patienttype.getSelectedItem());
             pst.setString(9, date.getText());
             pst.setString(10, phoneno.getText());
-
             pst.setString(11, patientid.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Record Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Updated Sucessfully");
             patientid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
@@ -451,7 +471,6 @@ public class SearchPatient extends javax.swing.JFrame {
             cnic.setText(null);
             date.setText(null);
             phoneno.setText(null);
-
             gender.setSelectedIndex(0);
             status.setSelectedIndex(0);
             patienttype.setSelectedIndex(0);
@@ -463,7 +482,6 @@ public class SearchPatient extends javax.swing.JFrame {
             cnic.setText(null);
             date.setText(null);
             phoneno.setText(null);
-
             gender.setSelectedIndex(0);
             status.setSelectedIndex(0);
             patienttype.setSelectedIndex(0);
@@ -471,6 +489,21 @@ public class SearchPatient extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_updateActionPerformed
+
+    private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstnameActionPerformed
+
+    private void patientidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patientidActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        Bill mb = new Bill();
+        mb.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -533,6 +566,7 @@ public class SearchPatient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;

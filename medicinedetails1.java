@@ -15,7 +15,7 @@ import net.proteanit.sql.DbUtils;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class medicinedetails1 extends javax.swing.JFrame {
 
@@ -171,7 +171,7 @@ public class medicinedetails1 extends javax.swing.JFrame {
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel43.setText("Compony name");
+        jLabel43.setText("Company name");
         panel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 414, -1, 35));
 
         advice2.addActionListener(new java.awt.event.ActionListener() {

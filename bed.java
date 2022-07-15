@@ -1,3 +1,4 @@
+
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,17 +8,14 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class bed extends javax.swing.JFrame {
 
@@ -26,8 +24,8 @@ public class bed extends javax.swing.JFrame {
      */
     public bed() {
         initComponents();
-        panel2.setBackground(new Color(255,255,255,100));
-         showTableData();
+        panel2.setBackground(new Color(255, 255, 255, 100));
+        showTableData();
     }
 
     /**
@@ -202,89 +200,84 @@ public class bed extends javax.swing.JFrame {
     }//GEN-LAST:event_bednonameActionPerformed
 
     private void jButton3jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3jButton1ActionPerformed
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
-            PreparedStatement pst = conn.prepareStatement("insert into bed"+"(bid,category,room)"+" values(?,?,?)");
-            pst.setString(1,bedno.getText());
-            pst.setString(2,category.getSelectedItem().toString());
-            pst.setString(3,room.getText());
-            
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
+            PreparedStatement pst = conn.prepareStatement("insert into bed" + "(bid,category,room)" + " values(?,?,?)");
+            pst.setString(1, bedno.getText());
+            pst.setString(2, category.getSelectedItem().toString());
+            pst.setString(3, room.getText());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"BED Added Sucessfully");
+            JOptionPane.showMessageDialog(this, "BED Added Sucessfully");
             showTableData();
             bedno.setText(null);
             category.setSelectedIndex(0);
             room.setText(null);
-            
-        }
-        catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
 
         }
     }//GEN-LAST:event_jButton3jButton1ActionPerformed
-public void showTableData(){
-    try{
+    public void showTableData() {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.bed");
- ResultSet rs=pst.executeQuery();         
- depttable.setModel(DbUtils.resultSetToTableModel(rs));
-    }
-    catch(Exception e){
+            ResultSet rs = pst.executeQuery();
+            depttable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-}
+    }
     private void jButton8jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8jButton4ActionPerformed
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("delete from bed where bid=?");
-            pst.setString(1,bedno.getText());
+            pst.setString(1, bedno.getText());
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Record Deleted Sucessfully");
             showTableData();
             bedno.setText(null);
             category.setSelectedIndex(0);
             room.setText(null);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_jButton8jButton4ActionPerformed
 
     private void jButton9jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9jButton5ActionPerformed
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","190128");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
             PreparedStatement pst = conn.prepareStatement("UPDATE bed SET category=?,room=? WHERE bid=?");
 
-            pst.setString(2,room.getText());
-            pst.setString(1,category.getSelectedItem().toString());
- pst.setString(3,bedno.getText());
-           
+            pst.setString(2, room.getText());
+            pst.setString(1, category.getSelectedItem().toString());
+            pst.setString(3, bedno.getText());
+
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(this,"Record Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Record Updated Sucessfully");
             showTableData();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_jButton9jButton5ActionPerformed
 
     private void depttableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depttableMouseClicked
-        int SelectedRow =depttable.getSelectedRow();
-        DefaultTableModel table=(DefaultTableModel)depttable.getModel();
+        int SelectedRow = depttable.getSelectedRow();
+        DefaultTableModel table = (DefaultTableModel) depttable.getModel();
         bedno.setText(table.getValueAt(SelectedRow, 0).toString());
         category.setSelectedItem(table.getValueAt(SelectedRow, 1).toString());
-       
+
         room.setText(table.getValueAt(SelectedRow, 2).toString());
     }//GEN-LAST:event_depttableMouseClicked
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        adminpanel ap=new adminpanel();
+        adminpanel ap = new adminpanel();
         ap.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed

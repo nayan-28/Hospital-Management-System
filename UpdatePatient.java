@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.*;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class UpdatePatient extends javax.swing.JFrame {
 
@@ -74,6 +73,7 @@ public class UpdatePatient extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         updatepatient = new javax.swing.JMenu();
         viewpatient = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -319,6 +319,15 @@ public class UpdatePatient extends javax.swing.JFrame {
         });
         searchpatient.add(viewpatient);
 
+        jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 0), null, null));
+        jMenu1.setText("Make Bill");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        searchpatient.add(jMenu1);
+
         setJMenuBar(searchpatient);
 
         pack();
@@ -470,6 +479,13 @@ public class UpdatePatient extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        Bill mb = new Bill();
+        mb.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -531,6 +547,7 @@ public class UpdatePatient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;

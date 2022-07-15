@@ -144,19 +144,19 @@ public class choosepatient extends javax.swing.JFrame {
 
         apTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "First Name", "SecondName", "Age", "Blood Group", "Gender", "Address", "NID", "Phoneno", "Maritialstatus"
+                "Patient ID", "First Name", "SecondName", "Age", "Maritialstatus", "BedNo", "Gender"
             }
         ));
         apTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -315,7 +315,7 @@ public class choosepatient extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.patient where P_id=?");
+            PreparedStatement pst = conn.prepareStatement("SELECT P_id,FirstName,SecondName,Age,MaritialStatus,BedNo,Gender FROM hospitalmanagementsystem.patient where P_id=?");
             pst.setString(1, DRNAME.getText());
             ResultSet rs = pst.executeQuery();
             apTable.setModel(DbUtils.resultSetToTableModel(rs));

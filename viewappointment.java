@@ -4,15 +4,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.RowFilter;
-import javax.swing.RowSorter;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
 
 /*
@@ -141,7 +132,7 @@ public class viewappointment extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "DoctorName", "PatientName", "Date", "Time"
             }
         ));
         apTable.setEnabled(false);
@@ -151,12 +142,16 @@ public class viewappointment extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(apTable);
+        if (apTable.getColumnModel().getColumnCount() > 0) {
+            apTable.getColumnModel().getColumn(1).setResizable(false);
+            apTable.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 1020, 350));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 102, 255));
-        jLabel11.setText("TYPE YOUR NAME");
+        jLabel11.setText("PATIENT NAME");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 330, -1));
 
         DRNAME.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +224,7 @@ public class viewappointment extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem", "root", "190128");
-            PreparedStatement pst = conn.prepareStatement("SELECT * FROM hospitalmanagementsystem.appointment where dname=?");
+            PreparedStatement pst = conn.prepareStatement("SELECT dname,pname,date,time FROM hospitalmanagementsystem.appointment where pname=?");
             pst.setString(1, DRNAME.getText());
             ResultSet rs = pst.executeQuery();
             apTable.setModel(DbUtils.resultSetToTableModel(rs));

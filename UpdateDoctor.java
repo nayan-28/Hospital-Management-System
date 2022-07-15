@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class UpdateDoctor extends javax.swing.JFrame {
 

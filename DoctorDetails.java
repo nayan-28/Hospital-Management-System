@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Muhammmad Kashif
+ * @author NAYAN MALAKAR
  */
 public class DoctorDetails extends javax.swing.JFrame {
 
@@ -470,7 +470,6 @@ public class DoctorDetails extends javax.swing.JFrame {
             PreparedStatement pst = conn.prepareStatement("insert into doctor" + "(D_id,firstname,secondname,age,bloodgroup,gender,address,cnic,maritialstatus,city,specialization,phoneno,joiningdate,leavingdate,username,password,timing,days)" + " values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
             //FileInputStream is = new FileInputStream(new File(s));
-
             pst.setString(1, doctorid.getText());
             pst.setString(2, firstname.getText());
             pst.setString(3, secondname.getText());
