@@ -1,3 +1,4 @@
+
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -102,7 +103,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/home.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/management/system/back (2).png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -132,12 +133,10 @@ public class PatientDetails1 extends javax.swing.JFrame {
                     .addGroup(panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panel2Layout.createSequentialGroup()
-                                .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel18))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel18))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(662, 662, 662))
         );
 
@@ -381,7 +380,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
         }
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        adminpanel ap = new adminpanel();
+        ReceptionitActivity ap = new ReceptionitActivity();
         ap.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -432,7 +431,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
 
             pst.executeUpdate();
             showTableData();
-            JOptionPane.showMessageDialog(this, "Record Inserted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Saved Sucessfully");
             patientid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
@@ -470,7 +469,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             pst.setString(12, patientid.getText());
             pst.executeUpdate();
             showTableData();
-            JOptionPane.showMessageDialog(this, "Record Updated Sucessfully");
+            JOptionPane.showMessageDialog(this, "Updated Sucessfully");
             patientid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
@@ -512,7 +511,7 @@ public class PatientDetails1 extends javax.swing.JFrame {
             table.removeRow(SelectedRowIndex);
             pst.executeUpdate();
             showTableData();
-            JOptionPane.showMessageDialog(this, "Record Deleted Sucessfully");
+            JOptionPane.showMessageDialog(this, "Deleted Sucessfully");
             patientid.setText(null);
             firstname.setText(null);
             secondname.setText(null);
